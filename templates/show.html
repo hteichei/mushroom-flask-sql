@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Specs on the {{ mushroom.comm_name }}</h1>
+<ol>
+  <li>Common Name: {{ mushroom.comm_name }}</li>
+  <li>Latin name: {{ mushroom.lat_name }}</li>
+  <li>Symbiotic Associations: {{ mushroom.sym_associations }}</li>
+</ol>
+<div>
+  <a href="{{ url_for('index') }}">Return Home</a>
+</div>
+<div>
+    <a href="{{ url_for('edit', id=mushroom.id) }}">Edit the mushroom</a>
+</div>
+<div>
+  <form action="{{ url_for('destroy', id=mushroom.id) }}?_method=DELETE" method="POST">
+    <button id='deleteBtn' type="submit"> <i id='trash' class="fas fa-trash-alt"></i>Delete mushroom from list</button>
+  </form>
+</div>
+{% endblock %}

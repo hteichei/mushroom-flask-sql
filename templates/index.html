@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Current Mushroom List:</h2>
+<ol>
+{% for mushroom in mush_list %}
+  <li><a href="{{ url_for('show', id=mushroom.id) }}">{{ mushroom.comm_name }}</a></li>
+{% endfor %}
+</ol>
+<a href="{{ url_for('new') }}"><i id='addIcon' class="fas fa-plus"></i>Add a mushroom</a>
+{% endblock %}
+

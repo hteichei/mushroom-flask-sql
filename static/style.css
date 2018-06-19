@@ -1,0 +1,29 @@
+body {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+#warning {
+  border: 1px solid red;
+  background-color: rgba(189, 65, 65, 0.5);
+  padding: 0 10px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+#warnIcon {
+  padding: 0 5px;
+}
+
+#trash {
+  padding-right: 5px;
+}
+
+#deleteBtn {
+  border: 1px solid red;
+}
+
+#addIcon {
+  padding: 0 5px;
+  font-size: 12px;
+}
